@@ -1,8 +1,0 @@
-Wien takeoff Model: Boeing 767-400ER , max. Passengers: 255, passengers: 177, travel speed: 0.8 and range: 10454
-Zürich landing Model: Boeing 767-400ER , max. Passengers: 255, passengers: 177, travel speed: 0.8 and range: 10454
-Zürich takeoff Model: Boeing 767-400ER , max. Passengers: 255, passengers: 208, travel speed: 0.8 and range: 10454
-New York landing Model: Boeing 767-400ER , max. Passengers: 255, passengers: 208, travel speed: 0.8 and range: 10454
-New York takeoff Model: Boeing 767-400ER , max. Passengers: 255, passengers: 213, travel speed: 0.8 and range: 10454
-Zürich landing Model: Boeing 767-400ER , max. Passengers: 255, passengers: 213, travel speed: 0.8 and range: 10454
-Zürich take off Model: Boeing 767-400ER , max. Passengers: 255, passengers: 255, travel speed: 0.8 and range: 10454
-Wien landing Model: Boeing 767-400ER , max. Passengers: 255, passengers: 255, travel speed: 0.8 and range: 10454

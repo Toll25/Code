@@ -1,4 +1,0 @@
-Anzahl Kleinbuchstaben: 0
-Anzahl Großbuchstaben: 0
-Anzahl Ziffern: 0
-Restliche Symbole: 16

@@ -1,5 +1,0 @@
-title: Der Buick, ISBN: 978-3550083532, pageCount: 495
-title: Teleport 3, ISBN: 979-8549101586, pageCount: 308464
-title: Der letzte Wunsch, ISBN: 978-3423262644, pageCount: 384
-title: Zeit des Sturmes, ISBN: 978-3423262668, pageCount: 448
-title: Das Schwert der Vorsehung, ISBN: 978-3423262651, pageCount: 464

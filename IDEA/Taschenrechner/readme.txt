@@ -1,1 +1,0 @@
-Hier könnten Informationen stehen.

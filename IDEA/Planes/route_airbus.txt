@@ -1,8 +1,0 @@
-Wien takeoff Model: Airbus A340-600 , max. Passengers: 300, passengers: 255, travel speed: 0.83 and range: 14630
-Mailand landing Model: Airbus A340-600 , max. Passengers: 300, passengers: 255, travel speed: 0.83 and range: 14630
-Mailand takeoff Model: Airbus A340-600 , max. Passengers: 300, passengers: 299, travel speed: 0.83 and range: 14630
-Rom landing Model: Airbus A340-600 , max. Passengers: 300, passengers: 299, travel speed: 0.83 and range: 14630
-Rom takeoff Model: Airbus A340-600 , max. Passengers: 300, passengers: 118, travel speed: 0.83 and range: 14630
-Mailand landing Model: Airbus A340-600 , max. Passengers: 300, passengers: 118, travel speed: 0.83 and range: 14630
-Mailand take off Model: Airbus A340-600 , max. Passengers: 300, passengers: 300, travel speed: 0.83 and range: 14630
-Wien landing Model: Airbus A340-600 , max. Passengers: 300, passengers: 300, travel speed: 0.83 and range: 14630

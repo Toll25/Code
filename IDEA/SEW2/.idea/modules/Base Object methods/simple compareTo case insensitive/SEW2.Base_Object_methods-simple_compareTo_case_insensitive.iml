@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Base_Object_methods-simple_compareTo_case_insensitive" external.linked.project.path="$MODULE_DIR$/../../../../Base Object methods/simple compareTo case insensitive" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="SEW2" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../Base Object methods/simple compareTo case insensitive">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../Base Object methods/simple compareTo case insensitive/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../Base Object methods/simple compareTo case insensitive/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../Base Object methods/simple compareTo case insensitive/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

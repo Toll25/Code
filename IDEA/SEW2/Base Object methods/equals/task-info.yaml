@@ -1,0 +1,46 @@
+type: edu
+files:
+- name: src/Task.java
+  visible: true
+  placeholders:
+  - offset: 298
+    length: 39
+    placeholder_text: /* Place your code here */
+    initial_state:
+      length: 26
+      offset: 280
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: KOZYh3U4kySPHwky1D3R8ZW063gzhvsvPYMk5Lj0Fp2VbXpzAzUJTvwpRJhf3SpTPJITlyzIIGQwymCN+29/cg==
+  - offset: 391
+    length: 74
+    placeholder_text: /* Place your code here */
+    initial_state:
+      length: 26
+      offset: 368
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: Gt4ylTQ0dFcwBGH2lxzD9ulI6CKoktNFcmrRkrmfnO5GCPkpoAI7sWbH+uleDbYtaAL7sWlD2KpQ3ve8ks1tVRzz59LNAPNI5Xz3F6+mh8Q=
+  - offset: 529
+    length: 98
+    placeholder_text: /* Place your code here */
+    initial_state:
+      length: 26
+      offset: 467
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: WMgcBBSmNV0WLhsc9q1nu1FBa1vHIvqA4BRl857aVc3XG1shMFAdyoX8lhIaIfXKGOk5lGc1Vpl1que/Lr4SWzQQwoJotXtN+m03r7/sQfXMCVP9GLD8Z0+Z2C1hH86nDkgp9pW+iEZj3TF20Sux3Yf7WMF4Skeu8+O+MVcNIjY=
+  encrypted_text: WEJEkhpCAL5HUFSlR3wpP0YRPbnPXS+G9Nn1+HW1n4cYSM7YKmYHtThcWGUMW0fVuqjcFX2d4lg541ZQCF+vnc822tfvkt/mTdXobHElnFZc1WsEsRFydXz+ZgMKr40PAR26SOR4YUv87W7hR6vZyv+2Lj73CBFQxUz6zOrHs//kwfRAFtWG4i1wNwW2qQrMYFKsTDWzfPhrduKcJCyFADeQC1+ETYX734ddqTsMf7Hsquc4U+kR2S92WsNXzaWVKaHYC/AH8pXHNNDPdDcn9pOhjm/arwtdciKD7WGhlOeVkYHPA/RFOV73wL5ZWnIi4/Tlmc03loKpNX8ZgQYNfFfKCJ0qCt3cXSdGrTId6mm+hvYpE8S08g5FXXPc1WCVFF/ohfNq86Xi1kDsFqhtk123zfB6AyeY4OBdSlOb7B8j0lbs3OEPyEILNPi/xLC8MhCmoRm6K7MkHbhI3lWGVEB5dWJ7YJG5ELWgx5iudD9o/tYxRVnPa/2PhI/mWP1etU7+UAVRaI3qNPzJlYAbxuKJHJUcKOjMpA4aMUI7eDTjGvDNQVltadUDc9H0nwkoCNTcNKKIehBOxfygEPBieApaN6HbNupUpSZMU7m4WG9u5NW9MPh1PZTFDoXXwiS7LVpkyrunbm9/PRGsDXNvYQUDjO05rbEWe0VFjLQddt0=
+  learner_created: false
+- name: test/Tests.java
+  visible: false
+  encrypted_text: ITs8Nv8EH6QWJG5nufD7nL+5+4bhYoXDvmVthWtIgQ65QGrosPwl8pWa8Roz0DaOzyNHGqghbkq1kO1chMNERKIVtu6Wa2mQTUeXLeRxui7TjdtuSYfXVcmhig1a0OyQaOFdziJEHXbcPHoK9BH3c5Psgd3p1CjxKxSexKf4tBdrCtyEhN4gbMg1tgDA/z5lycTI2skvT1QMW5E4viMEBHQXygICmVQNWrRQgNtPV5/dL0x9J9Yu1n7nmkqF+FyxozYPPl5T2lh1m3wkg60ryul9bjMCIJaHUezVG81enyHOm5eDNXc7JNW6XBHj1sfu
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Tue, 29 Mar 2022 12:52:07 UTC
+record: -1

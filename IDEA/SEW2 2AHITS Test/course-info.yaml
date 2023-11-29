@@ -1,0 +1,11 @@
+type: marketplace
+title: SEW2 2AHITS Test
+language: English
+summary: SEW Test in der 2AHITS
+programming_language: Java
+content:
+- Test
+mode: Study
+solutions_hidden: true
+vendor:
+  name: Helmut Rahm

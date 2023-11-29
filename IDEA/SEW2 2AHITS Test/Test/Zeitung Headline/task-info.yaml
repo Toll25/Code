@@ -1,0 +1,23 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+  encrypted_text: tRNSHXintusWEzPeHy6+XHiWiaNKBTU2sZ+hoHWuRYvziSvTv72n761RR4E1Pm8vDkCCFhRbczBPLq+8NQYPqcZbLgnhpJ67tj2cnYgXBEK3gdCaPPL6aMWfPSYIMKl7oIYd5pDHD9hzuDYfdQgpfp6sLElOQZSPt5rgEIdokgTj2ijWvsTPjGzbKUXWN78M
+  learner_created: false
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 448
+    length: 28
+    placeholder_text: /* TODO Formel 1 Headline */
+    initial_state:
+      length: 28
+      offset: 448
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: W2wms0a0isIkTRMWWvANzM738dcxKDv+oNVay0oF+JFDCkNz/qyeN7OCm+1vyhWhNxuSjtonGEudvdf2KF5wKSRvXpwPuCVwQ23wWJzvB23EQXqWzP8xxB1QuzKL1GE6pYu1qbfvCrH9ej+BokepDKhejQ/W/Dvvbr07lwN6yOdE9Dm0XMik2B8F/NlaIy3kASywaeKUi7OcFNYy/Ab+wRFAbEkE4EVbub00b0dwhtcPx9oC3tv3+E6HMPZKANOn0yVUowaYrzO5avqHspu2JCZNHmCNXrHi3jZmM2IHIq0=
+  encrypted_text: a3Oc3sOKihNm0o8Cls6Am4BU5WKavemmrYTYXmzh/WuQfzHR3doZI/3hHs82WT1cfu+S8Hbqcvqsd43cOU6Yw8LMjR4Qo/LVaS6vv+fxOELhXkPTrXzDO+FYNDj6GJ9yaYTBD7uWWGziBjK2MKwqo5fT3bNFW4+qhhtyqfTwVwUnYpzFUilFEmbmdwbtiQk2DHetcbx4UGqS3C1mi+MztR/dilMokMyKU3iZRTRQYxbFNNDsmaEmilt3g2tlQsKyO5y4POgKIo9uW9TEDQaXCHmgW5/RT2D46XNYzV0XwvQJH9oMxyY0rfN20ZMPDt+yRfQowbImJxvZ3Bczg+Dz2Ar5HSvSzvEkddlbUZN2eNszKmuFe7z3rFOUvldzzDB9q8xziLsWRpNtIFtCxz8T9lhlo8YTXF5r6H1rSBMYk2T5TfNe01Jb2qLigsc9CpUhEVvvWHQUy/4np2InVtT1cDt7dLxJCEBzhvGodRfX0W8tsK//CJFTaEVw5j4UVTp59tjPvLfeBzyf7RcOfmq1ubchN2dsxnOtD/dxNWny2XDrI5GdFbRvAiWuWBmZwNnR/mz+D/0TV98MSoI41mkC91Voy2tlBnK6i1eRW+mliNlUsTUpDA4a5e9XkFVSpY1FHVyblXDDut5ifiSm4GyaEA==
+  learner_created: false
+status: Unchecked
+record: -1

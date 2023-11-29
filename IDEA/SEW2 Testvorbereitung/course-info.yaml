@@ -1,0 +1,12 @@
+type: marketplace
+title: SEW2 Testvorbereitung
+language: English
+summary: Beispielaufgaben zur Vorbereitung auf den Test im 2. Semester
+programming_language: Java
+content:
+- Stringverarbeitung
+- valueOf
+- call by reference or value
+mode: Study
+vendor:
+  name: Helmut Rahm

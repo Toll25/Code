@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Test-Finde_Wort:main" external.linked.project.path="$MODULE_DIR$/../../../../Test/Finde Wort" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="SEW2_2AHITS_Test" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../../Test/Finde Wort/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../Test/Finde Wort/src">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../Test/Finde Wort/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="SEW2_2AHITS_Test.util.main" />
+  </component>
+</module>

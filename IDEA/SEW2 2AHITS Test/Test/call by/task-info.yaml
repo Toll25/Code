@@ -1,0 +1,12 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+  encrypted_text: R+tUsKgRNn3Z5M5kT7ptudyk5C+pb86HSkWUDtvJzJc=
+  learner_created: false
+- name: src/Main.java
+  visible: true
+  encrypted_text: a3Oc3sOKihNm0o8Cls6Am2veUqlp63F5lxEAwbBQempXPsBIjeXs2wTZafI9V0nFYxAf1rSciieVcn3ovR1XW4CZZE5SS06icbLGEkHfJDbPkClYwmBM9teqalzEqm2yQ0PYE11R2XKO4EGc1r7nhYjmMmWqxHCXkGPTyMtANcozMabhVuN7f7W/AeypgLCKyT5AmIXeJlpzEj8cevwzav18AOMEi8E+fE4pwOMCjoaVq8bdmXtqxjXbbew+XDIeKIKSUb6y9eQ3Ue5kOCdOAcbgLCflbk2Th8Xywq0Ky4zR9mMMLJtnVVYfNLLDe8P42ZPZzY85MP52+o8QtcrDVXP7miYKTFquFNxGGu3eMNH2MWVO/zej6Tk7u5XEKnERa6B8czTvZxBtETXWmDPSTJk1Vw6rrnB+PVHE7NQUhC+SNyUwZpEbFz4r3T87t3xCLL1tWRMf4USmXaewND7BJOMTs9dGiRGerzdrdrTW0kfy6RsC/9YoyAC+CDKFhjjHBoMNIF5GUHXzrfW4VN94IUr3wijup02QO5nuLxKlO20=
+  learner_created: false
+status: Unchecked
+record: -1

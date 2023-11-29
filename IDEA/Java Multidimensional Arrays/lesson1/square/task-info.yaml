@@ -1,0 +1,36 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+  encrypted_text: /HQxBqsY2BffrwN/GhwHgPI6XQXoBzWZ/imRcybup1VsMt2a5GOE0Tg7LriY/72Z
+  learner_created: false
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 174
+    length: 84
+    placeholder_text: /* TODO */
+    initial_state:
+      length: 10
+      offset: 174
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: Ko6rfApIItOJsIWWqn8h7bvv+7KoTkt6ui9sq8pppOPCpmd+ByLdmdel5aezEM/Sop7DITKJo8gWHw4oo4mioh1P6LBK/mNQrNbwlODWdXa5Vw23cYrYVoYfwOUR1Z8Sm+ROULz4ysVTzlV/kXNa9g==
+  - offset: 362
+    length: 115
+    placeholder_text: /* TODO */
+    initial_state:
+      length: 10
+      offset: 294
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: qu1pMp6fspXnw5Mvr708mxNIFvdhJfOtk4vImfAh/x6YrdPWAlCTcTghjSSeAV8GphNX0Rr8pVyP7TZrE6VY88hSJXD1en7LMtUizDMhoquYYlnjCzO19ed1LviiPJ2vwUIr65xSRZOJ1Wh96fE9G63s753xvWqe8V0KkAWQaEJxp0BR2sPHByefN0FWmy79qNoPqxvhHYMymxeVE3IX8D0n4yO73+Qcfon/fOd+6I+6gfsOIfsutrMq9BK+On+mPQdQMxM8ygI2pLGLFIr7rg==
+  encrypted_text: a3Oc3sOKihNm0o8Cls6Am4BU5WKavemmrYTYXmzh/WuQfzHR3doZI/3hHs82WT1cfu+S8Hbqcvqsd43cOU6Yw3WYf8MTNN7UrTimmcC1hnK075sQGUCUh2HoRBU9PJcUNT9jFohkKgzisftnBvvHO12kxr0TW7OBW5pGo3embu/TNbod5wVffD+vtgNOLRwA2lzRhvn+kNOR3gTDcB/p8qhDF+o6z4+NYP61IEwZpnvUZH6E5QT2qLQJD0LqmuK7g11XgBhCrMeAgr4Cn8pLj/JrRAmH4gGOAX1/FCPTv+zk2zA2NF6crn/NgjbTbGvbQSHOKMnk5pAos630pl6sFmBUMkuEqrge2OVyWXrzU6FPNTiw0t6sftrut0aeGDjbS6iXWIP3kFBVPOE2Xaql1HDbL73qfA1kzhi+Qonydbw=
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Tue, 03 May 2022 13:03:49 UTC
+record: -1

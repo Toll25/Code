@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Java_Multidimensional_Arrays.iml" filepath="$PROJECT_DIR$/.idea/modules/Java_Multidimensional_Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/bool X 0/Java_Multidimensional_Arrays.lesson1-bool_X_0.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/bool X 0/Java_Multidimensional_Arrays.lesson1-bool_X_0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/bool X 0/Java_Multidimensional_Arrays.lesson1-bool_X_0.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/bool X 0/Java_Multidimensional_Arrays.lesson1-bool_X_0.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/bool X 0/Java_Multidimensional_Arrays.lesson1-bool_X_0.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/bool X 0/Java_Multidimensional_Arrays.lesson1-bool_X_0.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/int 4x4/Java_Multidimensional_Arrays.lesson1-int_4x4.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/int 4x4/Java_Multidimensional_Arrays.lesson1-int_4x4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/int 4x4/Java_Multidimensional_Arrays.lesson1-int_4x4.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/int 4x4/Java_Multidimensional_Arrays.lesson1-int_4x4.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/int 4x4/Java_Multidimensional_Arrays.lesson1-int_4x4.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/int 4x4/Java_Multidimensional_Arrays.lesson1-int_4x4.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/rowSum/Java_Multidimensional_Arrays.lesson1-rowSum.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/rowSum/Java_Multidimensional_Arrays.lesson1-rowSum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/rowSum/Java_Multidimensional_Arrays.lesson1-rowSum.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/rowSum/Java_Multidimensional_Arrays.lesson1-rowSum.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/rowSum/Java_Multidimensional_Arrays.lesson1-rowSum.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/rowSum/Java_Multidimensional_Arrays.lesson1-rowSum.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/rowSumOutput/Java_Multidimensional_Arrays.lesson1-rowSumOutput.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/rowSumOutput/Java_Multidimensional_Arrays.lesson1-rowSumOutput.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/rowSumOutput/Java_Multidimensional_Arrays.lesson1-rowSumOutput.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/rowSumOutput/Java_Multidimensional_Arrays.lesson1-rowSumOutput.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/rowSumOutput/Java_Multidimensional_Arrays.lesson1-rowSumOutput.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/rowSumOutput/Java_Multidimensional_Arrays.lesson1-rowSumOutput.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/square/Java_Multidimensional_Arrays.lesson1-square.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/square/Java_Multidimensional_Arrays.lesson1-square.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/square/Java_Multidimensional_Arrays.lesson1-square.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/square/Java_Multidimensional_Arrays.lesson1-square.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/square/Java_Multidimensional_Arrays.lesson1-square.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/square/Java_Multidimensional_Arrays.lesson1-square.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Java_Multidimensional_Arrays.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Java_Multidimensional_Arrays.util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Java_Multidimensional_Arrays.util.main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Java_Multidimensional_Arrays.util.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Java_Multidimensional_Arrays.util.test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Java_Multidimensional_Arrays.util.test.iml" />
+    </modules>
+  </component>
+</project>

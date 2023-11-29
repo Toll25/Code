@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SEW2_2AHITS_Test.iml" filepath="$PROJECT_DIR$/.idea/modules/SEW2_2AHITS_Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test/Finde Wort/SEW2_2AHITS_Test.Test-Finde_Wort.iml" filepath="$PROJECT_DIR$/.idea/modules/Test/Finde Wort/SEW2_2AHITS_Test.Test-Finde_Wort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test/Finde Wort/SEW2_2AHITS_Test.Test-Finde_Wort.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Test/Finde Wort/SEW2_2AHITS_Test.Test-Finde_Wort.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test/Finde Wort/SEW2_2AHITS_Test.Test-Finde_Wort.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Test/Finde Wort/SEW2_2AHITS_Test.Test-Finde_Wort.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test/Rechteck/SEW2_2AHITS_Test.Test-Rechteck.iml" filepath="$PROJECT_DIR$/.idea/modules/Test/Rechteck/SEW2_2AHITS_Test.Test-Rechteck.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test/Rechteck/SEW2_2AHITS_Test.Test-Rechteck.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Test/Rechteck/SEW2_2AHITS_Test.Test-Rechteck.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test/Rechteck/SEW2_2AHITS_Test.Test-Rechteck.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Test/Rechteck/SEW2_2AHITS_Test.Test-Rechteck.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test/Zeitung Headline/SEW2_2AHITS_Test.Test-Zeitung_Headline.iml" filepath="$PROJECT_DIR$/.idea/modules/Test/Zeitung Headline/SEW2_2AHITS_Test.Test-Zeitung_Headline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test/Zeitung Headline/SEW2_2AHITS_Test.Test-Zeitung_Headline.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Test/Zeitung Headline/SEW2_2AHITS_Test.Test-Zeitung_Headline.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test/Zeitung Headline/SEW2_2AHITS_Test.Test-Zeitung_Headline.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Test/Zeitung Headline/SEW2_2AHITS_Test.Test-Zeitung_Headline.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test/call by/SEW2_2AHITS_Test.Test-call_by.iml" filepath="$PROJECT_DIR$/.idea/modules/Test/call by/SEW2_2AHITS_Test.Test-call_by.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test/call by/SEW2_2AHITS_Test.Test-call_by.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Test/call by/SEW2_2AHITS_Test.Test-call_by.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Test/call by/SEW2_2AHITS_Test.Test-call_by.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Test/call by/SEW2_2AHITS_Test.Test-call_by.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/SEW2_2AHITS_Test.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/SEW2_2AHITS_Test.util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/SEW2_2AHITS_Test.util.main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/SEW2_2AHITS_Test.util.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/SEW2_2AHITS_Test.util.test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/SEW2_2AHITS_Test.util.test.iml" />
+    </modules>
+  </component>
+</project>

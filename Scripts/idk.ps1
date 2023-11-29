@@ -1,0 +1,1 @@
+New-ADUser -Name "Lehrer 1" --DisplayName "Lehrer 1" -Enabled $true -AccountPassword ( ConvertTo-SecureString -AsPlainText "1234" -Force) -UserPrincipalName lehrer13ahits.at -SamAccountName lehrer1 

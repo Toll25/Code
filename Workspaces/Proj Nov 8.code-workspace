@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../PlatformIO/Projects/Proj Nov 8"
+		},
+		{
+			"name": "ADC",
+			"path": "../../PlatformIO/Projects/ADC"
+		},
+		{
+			"name": "Display",
+			"path": "../PlatformIO/Projects/Display"
+		}
+	],
+	"settings": {}
+}

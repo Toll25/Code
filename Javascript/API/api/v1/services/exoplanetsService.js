@@ -1,8 +1,8 @@
-import {exoplanetsModel} from "../models/exoplanetsModel.js";
+import {getAllExoplanets} from "../models/exoplanetsModel.js";
 
 const exoplanetsService = {
     getExoplanets() {
-        return exoplanetsModel;
+        return getAllExoplanets();
     }
 };
 

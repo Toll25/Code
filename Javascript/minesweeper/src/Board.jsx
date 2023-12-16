@@ -1,28 +1,54 @@
 import { useState, useEffect } from 'react';
+import {FaBomb, FaFlag} from "react-icons/fa";
 
-const MineBoard = ({ size }) => {
+const MineBoard = ({ size1, size2, numberOfMines, clickTrigger, winTrigger, loseTrigger}) => {
     const [grid, setGrid] = useState([]);
     const [isGameOver, setGameOver] = useState(false);
     const [isGameWon, setGameWon] = useState(false);
-    const [clickTrigger, setClickTrigger] = useState(false);
 
     useEffect(() => {
-        const generateGrid = () => {
-            const newGrid = Array.from({ length: size }, () =>
-                Array.from({ length: size }, () => ({
-                    isMine: Math.random() < 0.2,
+
+        const generateGrid= () => {
+            const newGrid = Array.from({length: size1}, () =>
+                Array.from({length: size2}, () => ({
+                    isMine: false,
                     isFlagged: false,
                     isOpen: false,
                     value: 0,
                 }))
             );
+
+            let newNumberOfMines=numberOfMines
+            if(newNumberOfMines>(size1*size2)){
+                newNumberOfMines=size1*size2
+            }
+
+            for (let i = 0; i < newNumberOfMines; i++) {
+                let coordX = Math.floor(Math.random() * size1)
+                let coordY = Math.floor(Math.random() * size2)
+                do {
+                    coordX = Math.floor(Math.random() * size1)
+                    coordY = Math.floor(Math.random() * size2)
+                } while (newGrid[coordX][coordY].isMine)
+                for (let x = -1; x<=1;x++){
+                    for (let y = -1; y<=1;y++){
+                        if(x===0 && y===0){
+                            newGrid[coordX][coordY].value=-1
+                            newGrid[coordX][coordY].isMine=true
+                        }else{
+                            if (coordX + x >= 0 && coordX + x < size1 && coordY + y >= 0 && coordY + y < size2) {
+                                newGrid[coordX + x][coordY + y].value += 1;
+                            }
+                        }
+                    }
+                }
+            }
             setGrid(newGrid);
             setGameOver(false);
             setGameWon(false);
-        };
-
+        }
         generateGrid();
-    }, [ size]);
+    }, [size1,size2,numberOfMines,clickTrigger]);
 
     const handleCellClick = (row, col) => {
         if (isGameOver || isGameWon) return;
@@ -36,7 +62,8 @@ const MineBoard = ({ size }) => {
             }
 
             if (currentCell.isMine) {
-                currentCell.value = "M";
+                openAll();
+                loseTrigger()
                 setGameOver(true);
             } else {
                 openCell(newGrid, row, col);
@@ -46,7 +73,6 @@ const MineBoard = ({ size }) => {
 
             return newGrid;
         });
-        setClickTrigger(!clickTrigger);
     };
 
     const handleRightClick = (event, row, col) => {
@@ -54,38 +80,33 @@ const MineBoard = ({ size }) => {
 
         if (isGameOver || isGameWon) return;
 
-        setGrid((prevGrid) => {
-            const newGrid = [...prevGrid];
-            const currentCell = newGrid[row][col];
+        const newGrid = [...grid];
+        const currentCell = newGrid[row][col];
 
-            if (!currentCell.isOpen) {
-                console.log("Before toggle:", newGrid[row][col].isFlagged);
+        if (!currentCell.isOpen) {
 
-                if(newGrid[row][col].isFlagged === true) {
-                    newGrid[row][col].isFlagged = false;
-                } else {
-                    newGrid[row][col].isFlagged = true;
-                    console.log("Set to true")
-                }
+            newGrid[row][col].isFlagged = !newGrid[row][col].isFlagged;
+        }
 
+        checkGameStatus(newGrid);
 
-                console.log("After toggle:", newGrid[row][col].isFlagged);
-            }
-
-            checkGameStatus(newGrid);
-
-            console.log(newGrid)
-            return newGrid;
-        });
-        setClickTrigger(!clickTrigger);
+        setGrid(newGrid);
     };
+
+    const openAll = () => {
+        for(let i = 0; i<size1; i++){
+            for (let j=0; j<size2;j++){
+                grid[i][j].isOpen=true;
+            }
+        }
+    }
 
     const openCell = (grid, row, col) => {
         if (
             row < 0 ||
-            row >= size ||
+            row >= size1 ||
             col < 0 ||
-            col >= size ||
+            col >= size2 ||
             grid[row][col].isOpen ||
             grid[row][col].isFlagged
         ) {
@@ -102,18 +123,20 @@ const MineBoard = ({ size }) => {
                     const newRow = row + i;
                     const newCol = col + j;
 
-                    if (newRow >= 0 && newRow < size && newCol >= 0 && newCol < size) {
+                    if (newRow >= 0 && newRow < size1 && newCol >= 0 && newCol < size2) {
                         minesAround += grid[newRow][newCol].isMine ? 1 : 0;
                     }
                 }
             }
 
-            grid[row][col].value = minesAround;
-
             if (minesAround === 0) {
                 for (let i = -1; i <= 1; i++) {
                     for (let j = -1; j <= 1; j++) {
-                        openCell(grid, row + i, col + j);
+                        const newRow = row + i;
+                        const newCol = col + j;
+                        if (newRow >= 0 && newRow < size1 && newCol >= 0 && newCol < size2) {
+                            openCell(grid, newRow, newCol);
+                        }
                     }
                 }
             }
@@ -128,9 +151,8 @@ const MineBoard = ({ size }) => {
             grid.some((row) => row.some((cell) => cell.isMine && cell.isOpen));
 
         if (isGameWon) {
-            console.log("Game won")
+            winTrigger()
             setGameWon(true);
-            setGameOver(true);
         }
     };
 
@@ -138,25 +160,22 @@ const MineBoard = ({ size }) => {
         <div
             className={`minesweeper ${isGameOver ? 'game-over' : ''} ${
                 isGameWon ? 'game-won' : ''
-            }`}
+            } w-fit`}
+            style={{ gridTemplateColumns: `repeat(${size2}, 1fr)` }}
         >
-            {grid.map((row, rowIndex) => (
-                <div key={rowIndex} className="row">
-                    {row.map((cell, colIndex) => (
-                        <BoardCell
-                            key={`${rowIndex}-${colIndex}`}
-                            isMine={cell.isMine}
-                            isFlagged={cell.isFlagged}
-                            isOpen={cell.isOpen}
-                            value={cell.value}
-                            onClick={() => handleCellClick(rowIndex, colIndex)}
-                            onRightClick={(event) =>
-                                handleRightClick(event, rowIndex, colIndex)
-                            }
-                        />
-                    ))}
-                </div>
-            ))}
+            {grid.map((row, rowIndex) =>
+                row.map((cell, colIndex) => (
+                    <BoardCell
+                        key={`${rowIndex}-${colIndex}`}
+                        isMine={cell.isMine}
+                        isFlagged={cell.isFlagged}
+                        isOpen={cell.isOpen}
+                        value={cell.value}
+                        onClick={() => handleCellClick(rowIndex, colIndex)}
+                        onRightClick={(event) => handleRightClick(event, rowIndex, colIndex)}
+                    />
+                ))
+            )}
         </div>
     );
 };
@@ -165,11 +184,11 @@ const BoardCell = ({ onClick, onRightClick, isMine, isFlagged, isOpen, value }) 
 
     return (
         <div
-            className={`cell ${isFlagged ? 'flagged' : ''} ${isOpen ? 'open' : ''}`}
+            className={`cell ${isFlagged ? 'flagged' : ''} ${isOpen ? 'open' : ''} flex justify-center items-center`}
             onClick={onClick}
             onContextMenu={onRightClick}
         >
-            {isOpen ? (isMine ? 'M' : value) : isFlagged ? 'F' : ''}
+            {isOpen ? (isMine ? <div><FaBomb /></div> : value) : isFlagged ? <div><FaFlag /></div> : ''}
         </div>
     );
 };

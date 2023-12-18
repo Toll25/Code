@@ -54,6 +54,7 @@
     color: var(--ctp-mocha-text);
 }
 
+/*
 .open::before {
     content: "";
     position: absolute;
@@ -64,6 +65,8 @@
     background-color: var(--cellUnOpenend);
     z-index: -1;
 }
+*/
+
 
 .flagged {
     background-color: var(--flag);

@@ -102,7 +102,7 @@ function App() {
                         size="lg"
                         step={1}
                         color="foreground"
-                        label="Number of Mines"
+                        label="Mines"
                         marks={[
                             {
                                 value: maxNumberOfMines * 0.2,
@@ -121,6 +121,7 @@ function App() {
                         minValue={1}
                         defaultValue={10}
                         value={numberOfMines}
+                        getValue={(mines) => `${mines} of ${maxNumberOfMines} Mines (${((mines / maxNumberOfMines) * 100).toFixed(2)}%)`}
                         onChange={setNumberOfMines}
                         className="max-w-md inline-block p-3"
                     />

@@ -21,6 +21,14 @@ function App() {
 
     let maxNumberOfMines = sizeX * sizeY;
 
+    function lose() {
+        onOpenLose()
+    }
+
+    function win() {
+        onOpenWin()
+    }
+
     return (
         <>
             <Modal isOpen={isOpenWin} onOpenChange={onOpenChangeWin} className="dark">
@@ -122,7 +130,7 @@ function App() {
                 </div>
 
                 <Board size1={sizeX} size2={sizeY} numberOfMines={numberOfMines} clickTrigger={triggerRerender}
-                       loseTrigger={onOpenLose} winTrigger={onOpenWin}></Board>
+                       loseTrigger={lose} winTrigger={win}></Board>
             </div>
         </>
     )

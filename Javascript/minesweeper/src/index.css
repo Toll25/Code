@@ -4,7 +4,7 @@
 @tailwind utilities;
 :root {
     --cellUnOpenend: var(--ctp-frappe-mauve);
-    --cellHover: var(--ctp-mocha-mantle);
+    --cellHover: var(--ctp-mocha-lavender);
     --cellOpened: var(--ctp-mocha-crust);
     --flag: var(--ctp-mocha-overlay0);
     --flagHover: var(--ctp-mocha-overlay1);
@@ -44,6 +44,7 @@
     color: var(--altText)
 }
 .open{
+    position: relative;
     background-color: var(--cellOpened);
     border: 2px solid var(--cellOpened);
 }
@@ -51,6 +52,17 @@
     background-color: var(--cellOpened);
     border-color: var(--cellOpened);
     color: var(--ctp-mocha-text);
+}
+
+.open::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 44px;
+    height: 44px;
+    background-color: var(--cellUnOpenend);
+    z-index: -1;
 }
 
 .flagged {

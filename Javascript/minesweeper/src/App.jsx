@@ -1,5 +1,5 @@
 import Board from './Board.jsx'
-import React, {useState} from "react";
+import {useState} from "react";
 import {
     Button, Modal,
     ModalBody,
@@ -11,7 +11,6 @@ import {
 } from "@nextui-org/react";
 
 function App() {
-    const [boardSize, setBoardSize] = useState(4); // Initial board size
     const [sizeX, setSizeX] = useState(10)
     const [sizeY, setSizeY] = useState(10)
     const [numberOfMines, setNumberOfMines] = useState(10)

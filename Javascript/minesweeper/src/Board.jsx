@@ -116,20 +116,7 @@ const MineBoard = ({ size1, size2, numberOfMines, clickTrigger, winTrigger, lose
         grid[row][col].isOpen = true;
 
         if (!grid[row][col].isMine) {
-            let minesAround = 0;
-
-            for (let i = -1; i <= 1; i++) {
-                for (let j = -1; j <= 1; j++) {
-                    const newRow = row + i;
-                    const newCol = col + j;
-
-                    if (newRow >= 0 && newRow < size1 && newCol >= 0 && newCol < size2) {
-                        minesAround += grid[newRow][newCol].isMine ? 1 : 0;
-                    }
-                }
-            }
-
-            if (minesAround === 0) {
+            if (grid[row][col].value === 0) {
                 for (let i = -1; i <= 1; i++) {
                     for (let j = -1; j <= 1; j++) {
                         const newRow = row + i;
@@ -158,8 +145,8 @@ const MineBoard = ({ size1, size2, numberOfMines, clickTrigger, winTrigger, lose
 
     return (
         <div
-            className={`minesweeper ${isGameOver ? 'game-over' : ''} ${
-                isGameWon ? 'game-won' : ''
+            className={`minesweeper ${
+                isGameWon || isGameOver ? 'noInteract' : ''
             } w-fit`}
             style={{ gridTemplateColumns: `repeat(${size2}, 1fr)` }}
         >
@@ -188,7 +175,7 @@ const BoardCell = ({ onClick, onRightClick, isMine, isFlagged, isOpen, value }) 
             onClick={onClick}
             onContextMenu={onRightClick}
         >
-            {isOpen ? (isMine ? <div><FaBomb /></div> : value) : isFlagged ? <div><FaFlag /></div> : ''}
+            {isOpen ? (isMine ? <div><FaBomb /></div> : (value === 0 ? null : value)) : isFlagged ? <div><FaFlag /></div> : ''}
         </div>
     );
 };

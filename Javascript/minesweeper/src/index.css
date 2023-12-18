@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 :root {
+    --cellUnOpenend: var(--ctp-frappe-mauve);
+    --cellHover: var(--ctp-mocha-mantle);
+    --cellOpened: var(--ctp-mocha-crust);
+    --flag: var(--ctp-mocha-overlay0);
+    --flagHover: var(--ctp-mocha-overlay1);
+    --altText: var(--ctp-mocha-crust);
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
@@ -23,44 +29,41 @@
 }
 
 .cell {
-    background-color: var(--ctp-mocha-base);
+    background-color: var(--cellUnOpenend);
     color: var(--ctp-mocha-text);
     padding: 20px;
     text-align: center;
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--ctp-mocha-base)
+    width: 0.25rem;
+    height: 0.25rem;
+    border: 2px solid var(--cellUnOpenend)
 }
 
 .cell:hover {
-    background-color: var(--ctp-mocha-mauve);
-    color: var(--ctp-mocha-base)
+    background-color: var(--cellHover);
+    border-color: var(--cellHover);
+    color: var(--altText)
 }
 .open{
-    background-color: var(--ctp-mocha-mantle);
-    border: 2px solid var(--ctp-mocha-mantle);
+    background-color: var(--cellOpened);
+    border: 2px solid var(--cellOpened);
 }
 .open:hover {
-    background-color: var(--ctp-mocha-mantle);
+    background-color: var(--cellOpened);
+    border-color: var(--cellOpened);
     color: var(--ctp-mocha-text);
 }
 
 .flagged {
-    border: 2px solid var(--ctp-mocha-red);
+    background-color: var(--flag);
+    border-color: var(--flag);
+    color: var(--altText);
 }
 
-.game-over .cell {
-    cursor: not-allowed;
+.flagged:hover {
+    background-color: var(--flagHover);
+    border-color:var(--flagHover);
 }
 
-.game-won {
-    background: yellow;
-}
-
-.game-over {
-    background: red;
-}
-
-.game-won .cell {
+.noInteract .cell {
     cursor: not-allowed;
 }

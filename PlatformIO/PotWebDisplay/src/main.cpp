@@ -76,7 +76,7 @@ void loop() {
 
   if(potStrength==prevPotStrength){
     
-  }else{
+  }else if ((0.9 * strength <= potStrength <= 1.1 * strength) || (strength==0)) {
     strength=potStrength;
   }
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Monitor</title>
+    <script>
+        function updateTemperature() {
+            // Use an AJAX request to get the temperature value from the server
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Update the temperature value on the page
+                    document.getElementById("temperature").innerHTML = "Temperature: " + this.responseText + "°C";
+                }
+            };
+            xhttp.open("GET", "/getTemperature", true);
+            xhttp.send();
+        }
+
+        // Refresh temperature every second
+        setInterval(updateTemperature, 50);
+    </script>
+</head>
+<body>
+    <h1>Temperature Monitor</h1>
+    <p id="temperature">Loading...</p>
+</body>
+</html>

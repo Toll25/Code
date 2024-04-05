@@ -6,6 +6,12 @@
 #include <DallasTemperature.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
+#include <nlohmann/json.hpp>
+#include <iostream>
+#include <SD.h>
+
+
+using json = nlohmann::json;
 
 
 #define SSID "HTLIoT"
@@ -29,17 +35,38 @@ WebServer myServer(80);
 
 JsonDocument doc;
 
+json data;
+
 void callback(char* topic, byte* payload, unsigned int length) {
-  Serial.print("Message arrived [");
-  Serial.print(topic);
-  Serial.print("] ");
-  for (int i=0;i<length;i++) {
-    Serial.print((char)payload[i]);
-  }
-  Serial.println();
+    // Convert the payload byte array to a string
+    std::string jsonString(reinterpret_cast<char*>(payload), length);
+
+    // Parse the string
+    json jsonData = json::parse(jsonString);
+
+    std::string name = jsonData["name"].get<std::string>();
+    json value = jsonData["value"];
+
+    // Store the "name" and "value" into the map
+    data[name] = value;
+
+    // Print the "name" value to the Serial
+    std::cout << data.dump(4) << std::endl;
+
+    // Open the file in write mode
+    File file = SD.open("data.json", FILE_WRITE);
+
+    if (file) {
+        // Write data to the file
+        file.write(payload, length);
+        file.close();
+    } else {
+        Serial.println("Error opening file for writing");
+    }
 }
 
-void handleRoot()
+
+void handleRoot() 
 {
     File file = SPIFFS.open("/test.html", "r"); 
     if (file)
@@ -101,19 +128,38 @@ void setup()
     sensors.begin();
 }
 
-void loop()
-{
-    sensors.requestTemperatures();
-    float temperatureC = sensors.getTempCByIndex(0);
-    temp = temperatureC;
-    Serial.print(temperatureC);
-    String json = "{\"name\":\"ESP-34\",\"value\":"+String(temp)+"}";
-    client.publish("HTL/NB/4AHITS/temperatures", json.c_str());
-    Serial.println("°C");
-    myServer.handleClient();
+unsigned long lastPublishTime = 0;
+const unsigned long publishInterval = 10000; // 10 seconds
+
+void loop() {
+    // Handle MQTT client events
     if (!client.connected()) {
         reconnect();
     }
-    delay(10000);
     client.loop();
+
+    // Check for incoming client connections and handle them
+    myServer.handleClient();
+
+    // Get current time
+    unsigned long currentTime = millis();
+
+    // Check if it's time to publish
+    if (currentTime - lastPublishTime >= publishInterval) {
+        // Request temperature readings
+        sensors.requestTemperatures();
+        float temperatureC = sensors.getTempCByIndex(0);
+        temp = temperatureC;
+        Serial.print(temperatureC);
+
+        // Publish temperature data
+        String json = "{\"name\":\"ESP-34\",\"value\":"+String(temp)+"}";
+        client.publish("HTL/NB/4AHITS/temperatures", json.c_str());
+
+        Serial.println("�C");
+
+        // Update last publish time
+        lastPublishTime = currentTime;
+    }
 }
+

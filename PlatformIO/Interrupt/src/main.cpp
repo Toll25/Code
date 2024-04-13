@@ -1,18 +1,43 @@
 #include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+const int PIN_TO_INTERRUPT = 33;
+const int LED_PIN = 16;
+long now = millis();
+long lastTrigger = 0;
+int counter = 0;
+boolean startTimer = false;
+long debounceTime = 25;
 
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+void IRAM_ATTR lightLED()
+{
+  counter++;
+  digitalWrite(LED_PIN, HIGH);
+  startTimer = true;
+  lastTrigger = millis();
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void setup()
+{
+  Serial.begin(9600);
+  Serial.println("setting up");
+
+  pinMode(PIN_TO_INTERRUPT, PULLUP);
+
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, LOW);
+
+  attachInterrupt(digitalPinToInterrupt(PIN_TO_INTERRUPT), lightLED, RISING);
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+void loop()
+{
+  now = millis();
+
+  if (startTimer && (now - lastTrigger > debounceTime))
+  {
+    Serial.println("no rising flank");
+    digitalWrite(LED_PIN, LOW);
+    startTimer = false;
+    Serial.println(counter);
+  }
 }

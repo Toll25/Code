@@ -1,0 +1,19 @@
+[package]
+name = "data_generator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.8"
+toml = "0.5"
+serde = { version = "1.0", features = ["derive"] }
+serde_derive = "1.0"
+fake = { version = "2.9.2", features = ["derive"] }
+rayon = "1.10"
+indicatif = "0.16.1"
+mongodb = "2.8.0"
+tokio = { version = "1.0", features = ["full"] }
+tokio-postgres = "0.7"
+dialoguer = "0.8"

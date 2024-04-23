@@ -14,7 +14,6 @@ use serde::Serialize;
 use std::fs::File;
 use std::io::Write;
 use std::time::Instant;
-use toml;
 
 #[derive(Dummy, Serialize, Clone)]
 struct User {

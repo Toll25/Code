@@ -1,0 +1,32 @@
+= DemoDocument
+
+Dieses *Document* dient als __Demo__ für AsciiDoc.
+
+== Überschrift 1
+
+Das ist der Inhalt von Überschrift 1.
+
+== Überschrift 2
+Das ist der Inhalt von Überschrift 2.
+
+[source, java]
+-----
+public static void main(String[] arg) {
+    System.out.println("Hallo");
+}
+-----
+
+.Demografik
+[ditaa,,svg]
+----
++---------+      +---------+
+|4AHITS   |  --> |heute    |
++---------+      +---------+
+----
+
+stem:[sqrt(4) = 2]
+
+[source, java, linenums]
+----
+include::Simple.java[]
+----

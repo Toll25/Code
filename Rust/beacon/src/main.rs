@@ -1,7 +1,5 @@
 use ndarray::{array, Array1};
 use std::collections::HashMap;
-use std::io;
-use std::io::Write;
 
 fn main() {
     let colors: HashMap<&str, [u8; 3]> = [
@@ -26,7 +24,7 @@ fn main() {
     .cloned()
     .collect();
 
-    let target_color = 0x810081;
+    let target_color = 0x5bcffb;
     print_for_color(target_color, &colors);
 }
 
@@ -130,7 +128,7 @@ fn calculate_color(panes: Vec<&str>, colors: &HashMap<&str, [u8; 3]>) -> [f64; 3
 fn generate_combinations<'a>(
     current_depth: usize,
     max_depth: usize,
-    current_combination: &mut Vec<&'a str>,
+    current_combination: &mut Vec<&'a str>, // Change to Vec<&'a str>
     possibilities: &'a HashMap<&'a str, [u8; 3]>,
     distance: &mut f64,
     most_similar: &mut Vec<&'a str>,
@@ -159,7 +157,7 @@ fn generate_combinations<'a>(
 
     let mut min_distance = std::f64::INFINITY;
 
-    for (index, key) in possibilities.keys().enumerate() {
+    for (key, _) in possibilities.iter() {
         // Append the current possibility to the combination
         current_combination.push(key);
 
@@ -181,27 +179,9 @@ fn generate_combinations<'a>(
 
         // Backtrack: Remove the last added possibility to try the next one
         current_combination.pop();
-
-        // Print progress information
-        if index == possibilities.len() - 1 {
-            print_progress(current_depth, max_depth, min_distance);
-        }
     }
 
     (min_distance, most_similar.to_vec()) // Return the minimum distance found in this depth level
-}
-
-fn print_progress(current_depth: usize, max_depth: usize, current_distance: f64) {
-    let progress = ((current_depth as f64 / max_depth as f64) * 100.0) as u8;
-    let status = format!(
-        "Progress: {}% (Distance: {:.2})",
-        progress, current_distance
-    );
-
-    // Clear previous progress and print new status
-    print!("\r{}\r", " ".repeat(status.len()));
-    print!("{}", status);
-    io::stdout().flush().unwrap();
 }
 
 fn generate_all_combinations<'a>(
@@ -230,7 +210,7 @@ fn print_for_color(target_color: u32, colors: &HashMap<&str, [u8; 3]>) {
 
     let target_color = [red, green, blue];
 
-    let (distance, approx_color) = generate_all_combinations(6, colors, target_color);
+    let (distance, approx_color) = generate_all_combinations(5, colors, target_color);
     let calculated_color = calculate_color(approx_color.clone(), colors);
 
     println!("Target Color: {:?}", target_color);

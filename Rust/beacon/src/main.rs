@@ -1,5 +1,7 @@
-use itertools::Itertools;
+use ndarray::{array, Array1};
 use std::collections::HashMap;
+use std::io;
+use std::io::Write;
 
 fn main() {
     let colors: HashMap<&str, [u8; 3]> = [
@@ -24,23 +26,75 @@ fn main() {
     .cloned()
     .collect();
 
-    let target_color = 0x1DB954;
+    let target_color = 0x810081;
     print_for_color(target_color, &colors);
-
-    let rainbow_colors = generate_rainbow_pattern(&colors, 100);
-    for (target_color, panes, final_color) in rainbow_colors {
-        println!(
-            "Target Color: {:?}, Approximated Panes: {:?}, Calculated Color: {:?}",
-            target_color, panes, final_color
-        );
-    }
 }
 
-fn color_distance(c1: &[u8; 3], c2: &[f64; 3]) -> f64 {
-    ((c1[0] as f64 - c2[0] as f64).powi(2)
-        + (c1[1] as f64 - c2[1] as f64).powi(2)
-        + (c1[2] as f64 - c2[2] as f64).powi(2))
-    .sqrt()
+fn s_rgb_to_linear_rgb(c: &[f64; 3]) -> [f64; 3] {
+    let c: Vec<f64> = c.iter().map(|&x| x / 255.0).collect();
+    let result: Vec<f64> = c
+        .iter()
+        .map(|&x| {
+            if x <= 0.04045 {
+                x / 12.92
+            } else {
+                ((x + 0.055) / 1.055).powf(2.4)
+            }
+        })
+        .collect();
+    [result[0], result[1], result[2]]
+}
+
+fn linear_rgb_to_xyz(rgb: &[f64; 3]) -> [f64; 3] {
+    let m = array![
+        [0.4124564, 0.3575761, 0.1804375],
+        [0.2126729, 0.7151522, 0.0721750],
+        [0.0193339, 0.1191920, 0.9503041]
+    ];
+    let rgb = array![rgb[0], rgb[1], rgb[2]];
+    let xyz = m.dot(&rgb);
+    [xyz[0], xyz[1], xyz[2]]
+}
+
+fn xyz_to_lab(xyz: &[f64; 3]) -> [f64; 3] {
+    let xyz_ref = array![0.95047, 1.00000, 1.08883];
+    let xyz: Array1<f64> = array![xyz[0], xyz[1], xyz[2]] / &xyz_ref;
+    let epsilon = 0.008856;
+    let kappa = 903.3;
+
+    let f = |t: f64| {
+        if t > epsilon {
+            t.powf(1.0 / 3.0)
+        } else {
+            (kappa * t + 16.0) / 116.0
+        }
+    };
+    let f_xyz = xyz.mapv(f);
+    let l = 116.0 * f_xyz[1] - 16.0;
+    let a = 500.0 * (f_xyz[0] - f_xyz[1]);
+    let b = 200.0 * (f_xyz[1] - f_xyz[2]);
+    [l, a, b]
+}
+
+fn delta_e(lab1: &[f64; 3], lab2: &[f64; 3]) -> f64 {
+    ((lab1[0] - lab2[0]).powi(2) + (lab1[1] - lab2[1]).powi(2) + (lab1[2] - lab2[2]).powi(2)).sqrt()
+}
+
+fn color_distance(c1: &[f64; 3], c2: &[f64; 3]) -> f64 {
+    // Convert sRGB to linear RGB
+    let linear_rgb1 = s_rgb_to_linear_rgb(c1);
+    let linear_rgb2 = s_rgb_to_linear_rgb(c2);
+
+    // Convert linear RGB to XYZ
+    let xyz1 = linear_rgb_to_xyz(&linear_rgb1);
+    let xyz2 = linear_rgb_to_xyz(&linear_rgb2);
+
+    // Convert XYZ to L*a*b*
+    let lab1 = xyz_to_lab(&xyz1);
+    let lab2 = xyz_to_lab(&xyz2);
+
+    // Compute the Delta E distance
+    delta_e(&lab1, &lab2)
 }
 
 fn calculate_color(panes: Vec<&str>, colors: &HashMap<&str, [u8; 3]>) -> [f64; 3] {
@@ -73,33 +127,100 @@ fn calculate_color(panes: Vec<&str>, colors: &HashMap<&str, [u8; 3]>) -> [f64; 3
     ]
 }
 
-fn approximate_color<'a>(
-    target_color: [u8; 3],
-    colors: &'a HashMap<&'a str, [u8; 3]>,
-    max_panes: usize,
-) -> Vec<&'a str> {
-    let color_keys: Vec<&str> = colors.keys().cloned().collect();
-    let mut most_similar = vec![];
-    let mut smallest_distance = f64::INFINITY;
+fn generate_combinations<'a>(
+    current_depth: usize,
+    max_depth: usize,
+    current_combination: &mut Vec<&'a str>,
+    possibilities: &'a HashMap<&'a str, [u8; 3]>,
+    distance: &mut f64,
+    most_similar: &mut Vec<&'a str>,
+    target_color_u8: [u8; 3],
+) -> (f64, Vec<&'a str>) {
+    if current_depth == max_depth {
+        let target_color: [f64; 3] = [
+            target_color_u8[0] as f64,
+            target_color_u8[1] as f64,
+            target_color_u8[2] as f64,
+        ];
 
-    for num_panes in 1..=max_panes {
-        for combo in color_keys.iter().combinations(num_panes) {
-            let result: Vec<&str> = combo.into_iter().cloned().collect();
+        // Calculate current color and its distance from target
+        let current_color = calculate_color(current_combination.clone(), possibilities);
+        let dist = color_distance(&target_color, &current_color);
 
-            if result.len() > 1 && result.iter().all_equal() {
-                continue;
-            }
+        // Update most_similar and distance if current combination is closer
+        if dist < *distance {
+            *distance = dist;
+            *most_similar = current_combination.clone();
+        }
 
-            let dist = color_distance(&target_color, &calculate_color(result.clone(), colors));
+        // Return the current distance for comparison
+        return (dist, most_similar.to_vec());
+    }
 
-            if dist < smallest_distance {
-                smallest_distance = dist;
-                most_similar = result;
-            }
+    let mut min_distance = std::f64::INFINITY;
+
+    for (index, key) in possibilities.keys().enumerate() {
+        // Append the current possibility to the combination
+        current_combination.push(key);
+
+        // Recursive call to generate combinations at the next depth
+        let (dist, _) = generate_combinations(
+            current_depth + 1,
+            max_depth,
+            current_combination,
+            possibilities,
+            distance,
+            most_similar,
+            target_color_u8,
+        );
+
+        // Track the minimum distance found in the recursive calls
+        if dist < min_distance {
+            min_distance = dist;
+        }
+
+        // Backtrack: Remove the last added possibility to try the next one
+        current_combination.pop();
+
+        // Print progress information
+        if index == possibilities.len() - 1 {
+            print_progress(current_depth, max_depth, min_distance);
         }
     }
 
-    most_similar
+    (min_distance, most_similar.to_vec()) // Return the minimum distance found in this depth level
+}
+
+fn print_progress(current_depth: usize, max_depth: usize, current_distance: f64) {
+    let progress = ((current_depth as f64 / max_depth as f64) * 100.0) as u8;
+    let status = format!(
+        "Progress: {}% (Distance: {:.2})",
+        progress, current_distance
+    );
+
+    // Clear previous progress and print new status
+    print!("\r{}\r", " ".repeat(status.len()));
+    print!("{}", status);
+    io::stdout().flush().unwrap();
+}
+
+fn generate_all_combinations<'a>(
+    max_depth: usize,
+    possibilities: &'a HashMap<&'a str, [u8; 3]>,
+    target_color: [u8; 3],
+) -> (f64, Vec<&'a str>) {
+    let mut initial_combination = Vec::new();
+    let (most_similar, smallest_distance) = generate_combinations(
+        0,
+        max_depth,
+        &mut initial_combination,
+        possibilities,
+        &mut f64::INFINITY,
+        &mut vec![],
+        target_color,
+    );
+
+    (most_similar, smallest_distance)
 }
 
 fn print_for_color(target_color: u32, colors: &HashMap<&str, [u8; 3]>) {
@@ -109,33 +230,11 @@ fn print_for_color(target_color: u32, colors: &HashMap<&str, [u8; 3]>) {
 
     let target_color = [red, green, blue];
 
-    let approx_color = approximate_color(target_color, colors, 12);
+    let (distance, approx_color) = generate_all_combinations(6, colors, target_color);
     let calculated_color = calculate_color(approx_color.clone(), colors);
 
     println!("Target Color: {:?}", target_color);
     println!("Calculated Color: {:?}", calculated_color);
+    println!("Distance: {}", distance);
     println!("Final Panes: {:?}", approx_color);
-}
-
-fn generate_rainbow_pattern<'a>(
-    colors: &'a HashMap<&'a str, [u8; 3]>,
-    granularity: usize,
-) -> Vec<([u8; 3], Vec<&'a str>, [f64; 3])> {
-    let mut pattern = vec![];
-    let step = 1.0 / granularity as f64;
-
-    for i in 0..granularity {
-        let ratio = i as f64 * step;
-        let r = (ratio * 255.0) as u8;
-        let g = ((1.0 - ratio) * 255.0) as u8;
-        let b = 127;
-
-        let target_color = [r, g, b];
-        let panes = approximate_color(target_color, colors, 12);
-        let final_color = calculate_color(panes.clone(), colors);
-
-        pattern.push((target_color, panes, final_color));
-    }
-
-    pattern
 }

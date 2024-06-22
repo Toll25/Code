@@ -24,7 +24,7 @@ fn main() {
     .cloned()
     .collect();
 
-    let target_color = 0x5bcffb;
+    let target_color = 0x00ffff;
     print_for_color(target_color, &colors);
 }
 

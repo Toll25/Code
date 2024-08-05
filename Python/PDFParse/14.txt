@@ -1,0 +1,34 @@
+Rng Snr Name, Vorname Verein/Ort Jg Swim Rng1 Bike Rng2 Run R ng3 Endzeit Staffel 
+1 22 Matzka, Roman LAC-Harlekin 1989 00:07:57 4 00:42:45 1 0 0:24:05 3 01:14:47 
+2 14 Lukacs, Markus UTTB (Gäste) 1985 00:07:39 2 00:44:59 2 00:23:05 1 01:15:43 
+3 17 Hatzak, Fabian LAC Harlekin 1988 00:08:07 5 00:46:22 7 00:24:08 4 01:18:37 
+4 18 Bruckner, Christian Tri Team Neudorf 1964 00:09:45 1 6 00:45:06 3 00:24:13 5 01:19:04 
+5 30 Pelzer, Lorenz Lac Harlekin-TriTeam Neudorf 1975 00 :09:00 10 00:45:50 4 00:24:42 6 01:19:32 
+6 23 Franaschitz, Rene LV LAND UM LAA 1982 00:08:33 9 00:4 5:58 5 00:26:24 8 01:20:55 
+7 5 Artner, Angelika LAC Harlekin 1983 00:07:49 3 00:46:41 9 00:26:42 11 01:21:12 
+8 21 Mahler, Simone LAC Harlekin 1989 00:08:15 6 00:46:07 6 00:28:21 17 01:22:43 
+9 28 Reidlinger, Markus LAC Harlekin 1977 00:10:52 25 00:4 9:39 14 00:23:46 2 01:24:17 
+10 19 Kretschmer, Kurt LAC Harlekin 1982 00:08:27 8 00:46: 26 8 00:29:42 21 01:24:35 
+11 2 Rebel, Christian City Triathlon Club 1962 00:09:16 1 4 00:49:18 13 00:26:18 7 01:24:52 
+12 6 Wolfi/Geri Wild, Katharina Pelzer DAS Tri Team 198 0 00:10:07 20 00:48:24 11 00:26:28 10 01:24:59 x
+13 29 Ehardt, Petra LAC Harlekin 1974 00:11:10 28 00:47:58 10 00:28:18 16 01:27:26 
+14 13 Wurmbauer, Michael RS Team Nordmänner 1985 00:10:0 9 21 00:49:53 15 00:28:27 18 01:28:29 
+15 3 Traupmann, Markus 1978 00:09:43 15 00:51:43 19 00:27:51 14 01:29:17 
+16 20 Strobl/Sieber, Roman/Patrick Poysdorf 2000 00:09:1 1 12 00:54:39 26 00:26:26 9 01:30:16 x
+17 7 Pelzer sen., Lorenz LAC Harlekin 1952 00:10:27 23 00: 49:14 12 00:31:03 23 01:30:44 
+18 12 Kraus, Jennifer LAC Harlekin 1985 00:09:11 12 00:54: 04 24 00:28:08 15 01:31:23 
+19 33 TYRA, Herbert SV Bäder 1960 00:09:02 11 00:51:37 18 00 :32:55 27 01:33:34 
+20 32 Putz, Eva-Maria LAC Harlekin 1996 00:10:06 19 00:56: 55 29 00:27:07 12 01:34:08 
+21 11 Martin, Christian LAC Harlekin 1963 00:10:58 26 00:5 5:43 28 00:27:31 13 01:34:12 
+22 24 Skoda, Franz LAC-Harlekin 1976 00:11:05 27 00:54:06 2 5 00:29:15 19 01:34:26 
+23 15 Blamauer, Christoph SV Bäder 1980 00:09:54 17 00:51: 33 17 00:33:23 28 01:34:50 
+24 8 Schweinzer, Manuel Gäste 1978 00:10:13 22 00:52:30 20 0 0:33:27 29 01:36:10 
+25 27 Bittmann, Lambert LAC Harlekin 1966 00:12:40 32 00:5 5:39 27 00:29:30 20 01:37:49 
+26 1 Bittmann, Roman LAC Harlekin 1971 00:11:20 29 00:53:5 5 23 00:32:43 26 01:37:58 
+27 10 Schwarz, Christian/Luise LAC Harlekin 1974 00:10:4 3 24 00:50:54 16 00:36:32 30 01:38:09 x
+28 31 Staribacher, Peter LV LAND UM LAA 1965 00:14:29 33 0 0:53:42 22 00:31:22 24 01:39:33 
+29 16 Smolak, Kathi Poysdorf 1982 00:12:38 31 00:57:24 30 00 :30:43 22 01:40:45 
+30 26 Schwanzer, Claudia Poysdorf 1982 00:12:20 30 01:00:2 9 31 00:32:36 25 01:45:25 
+31 4 Lenz Pelzer, Rosi Pelzer/Renate Pelzer LAC Harlek in 1975 00:08:21 7 00:53:31 21 00:44:01 33 01:45:53 x
+32 25 Jakob/Markus Lässig, Patricia Zimmerl SV Bäder 19 92 00:06:59 1 01:03:02 32 00:37:02 31 01:47:03 x
+33 9 Preinl, René SV Bäder 1974 00:09:57 18 01:05:32 33 00:4 3:31 32 01:59:00 14.Veltlinerman 2018 Poysdorf  am  14.07.2018 

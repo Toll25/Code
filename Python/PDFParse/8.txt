@@ -1,0 +1,37 @@
+Rng Snr Name, Vorname Verein/Ort Swim Tz Bike Tz Run Tz Endzeit Kommentar 
+1 18 Babitsch, Jürgen LAC Harlekin 07:39 1 00:43:21 1 22:28 3 01:13:28 Einzel 
+2 9 Leitner, Franz LAC Harlekin 09:13 10 00:45:23 7 22:25 2 01:17:01 Einzel 
+3 21 Hauer, Johann LAC Harlekin 08:51 9 00:45:02 6 23:30 5 01:17:23 Einzel 
+4 27 Klimes, Martin 08:50 8 00:43:49 2 26:02 13 01:18:41 Einzel 
+5 16 Üblauer, Thomas LAC Harlekin 10:06 15 00:44:04 4 25:20 10 01:19:30 Einzel 
+6 5 Pernold, Josef LAC Harlekin 08:44 6 00:49:19 16 21:52 1 01:19:55 
+7 25 Bruckner, Christian 10:42 19 00:45:59 8 23:29 4 01:20:10 
+8 10 Rene Franschitz, Rene Hager, Klaus Hofbauer LAC H arlekin 07:55 3 00:47:17 12 25:13 9 01:20:25 Staffel 
+9 1 Rebel, Christian 08:34 5 00:47:07 11 24:47 7 01:20:28 
+10 8 Pürkl, Ronnie LAC Harlekin 09:15 11 00:44:46 5 26:53 16 01:20:54 Einzel 
+11 7 Kretschmer, Kurt LAC Harlekin 07:41 2 00:47:49 14 26:39 15 01:22:09 Einzel 
+12 13 Schwaiger, Markus Freunde d Weinviertler Biers 11:50 29 00:47:22 13 24:51 8 01:24:03 Einzel 
+13 2 Matzka, Herwig LAC Harlekin 11:03 22 00:46:33 9 27:22 19 01:24:58 Einzel 
+14 24 Kretzel, Bernd 09:51 13 00:49:39 17 25:52 12 01:25:22 Einzel 
+15 19 Pelzer sen., Lenz LAC Harlekin 10:57 21 00:46:34 10 27:59 20 01:25:30 
+16 14 Matzka, Roman LAC Harlekin 10:27 17 00:44:00 3 33:11 33 01:27:38 Einzel 
+17 20 Schmid, Robert LAC Harlekin 10:03 14 00:48:41 15 29:56 26 01:28:40 Einzel 
+18 29 Nagl, Edi LAC Harlekin 08:48 7 00:49:44 18 30:09 27 01:28:41 Einzel 
+19 12 Wellner, Markus LAC Harlekin 10:29 18 00:53:50 24 25:25 11 01:29:44 Einzel 
+20 30 Schwarz, Christian LAC Harlekin 12:28 31 00:53:16 23 24:44 6 01:30:28 
+21 34 Barisch, Stefan LAC Harlekin 10:44 20 00:50:55 19 29:25 23 01:31:04 Einzel 
+22 28 Binder, Rainer 10:25 16 00:51:13 20 29:31 24 01:31:09 Einzel 
+23 22 Skoda, Franz LAC Harlekin 11:06 23 00:52:54 21 27:20 18 01:31:20 Einzel 
+24 33 Bernd Kretzel, Andreas Rohatschek, Paul Rohatsc hek Gäste 08:13 4 00:53:06 22 32:14 32 01:33:33 Staffel 
+25 32 Bürbaum, Gunter 11:15 25 00:54:04 25 31:38 30 01:36:57 Einzel 
+26 23 Martin, Christian LAC Harlekin 11:11 24 00:58:28 26 27:19 17 01:36:58 Einzel 
+27 4 Sabine, Jenny und Nikki, LAC Harlekin LAC Harleki n 09:40 12 01:00:05 29 29:13 22 01:38:58 Staffel 
+28 26 Schmid, Thomas LAC Harlekin 12:25 30 00:58:30 27 28:54 21 01:39:49 Einzel 
+29 17 Novak, Manuel 11:21 27 01:01:48 30 31:08 28 01:44:17 Einzel 
+30 11 Milanovic, Nenad 11:17 26 01:01:53 31 31:08 28 01:44:18 Einzel 
+31 3 Fröschl, Maria LAC Harlekin 12:33 32 01:02:51 32 29:35 25 01:44:59 
+32 15 Staribacher, Peter LV LAND UM LAA 15:59 35 00:58:48 28 33:20 34 01:48:07 Einze l 
+33 6 Gabi Lukas, Josef Pfeiffer, Elisabeth Köchl LAC H arlekin 11:40 28 01:07:52 34 31:46 31 01:51:18 Staffel 
+34 31 Fritz Schlemmer, Glock Kurt, Franz Köchl LAC Har lekin 13:36 34 01:11:26 35 26:17 14 01:51:19 Staffel 
+35 35 Kremser, Barbara Gäste 12:59 33 01:04:03 33 39:23 35 01:56:25 8.Veltlinerman 2012 
+Veltlinerman 450m/27,5km/5,7km  am  10.08.2012 
